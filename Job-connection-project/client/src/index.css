@@ -1,0 +1,34 @@
+@import url('./styles/table.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .hiddden-scrollbar {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+  }
+  .hidden-scrollbar::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+
+  .small-scrollbar::-webkit-scrollbar {
+    display: initial;
+    width: 8px;
+    height: 4px;
+  }
+
+  .small-scrollbar::-webkit-scrollbar-thumb {
+    background: #dedede;
+    border-radius: 100vh;
+  }
+
+  .small-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #cecece;
+  }
+}
+
+body {
+  color: #333;
+}
